@@ -1,0 +1,92 @@
+homeassistant:
+  name: Home
+  latitude: !secret LOC_homeLat
+  longitude: !secret LOC_homeLong
+  elevation: 54
+  unit_system: metric
+  time_zone: Europe/Stockholm
+  customize: !include customize.yaml
+
+zone 1:
+  name: Work
+  latitude: !secret LOC_workLat
+  longitude: !secret LOC_workLong
+  radius: 200
+  icon: mdi:map-marker-radius
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.1.1/24
+    home_interval: 10
+  - platform: mqtt_json
+    devices:
+      PopeensPhone: zanzito/PopeensPhone/location
+
+http:
+  api_password: !secret CRED_homeAssistantPassword
+
+hue:
+  bridges:
+    - host: !secret IP_philipsHue
+      filename: philips_hue.conf
+
+light:
+  platform: tellstick
+
+mqtt:
+  broker: !secret IP_MQTT
+
+tellstick:
+  host: core-tellstick
+  port: [50800, 50801]
+
+tts:
+  - platform: google
+
+cloudflare:
+  email: !secret email_popeen
+  api_key: !secret KEY_cloudflare
+  zone: popeen.com
+  records:
+    - home
+    - dev
+
+media_player:
+  - platform: xboxone
+    device: !secret ID_xbox
+    name: Xbox One
+
+cloud:
+  alexa:
+    filter:
+      include_entities:
+        - switch.livingroom__fan
+        - switch.livingroom__tv
+        - switch.xbox
+config:
+conversation:
+frontend:
+hassio:
+history:
+logbook:
+map:
+sun:
+updater:
+
+
+
+automation: !include_dir_list automations
+binary_sensor: !include binary_sensor.yaml
+group: !include groups.yaml
+notify: !include_dir_merge_list notifiers
+script: !include scripts.yaml
+sensor: !include sensor.yaml
+switch: !include switch.yaml
+
+
+
+panel_iframe:
+  panel_console:
+    title: 'Console'
+    url: 'http://192.168.1.164:7681/'
+    icon: mdi:console

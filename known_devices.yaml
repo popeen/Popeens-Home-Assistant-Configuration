@@ -1,0 +1,112 @@
+##### PHONES #####
+
+popeensphone:
+  mac: 94:65:2D:7B:36:62
+  name: popeensphone
+  track: true
+
+martins_phone:
+  mac: 2C:0E:3D:4F:63:A3
+  name: Martin
+  track: true
+
+nimas_phone:
+  mac: 94:65:2D:A4:95:A3
+  name: Nima
+  track: true
+
+
+
+##### PHYSICAL COMPUTERS #####  
+
+popeens_desktop:
+  mac: 40:8D:5C:58:D8:6A
+  name: Popeens Desktop
+  track: false
+
+popeens_server:
+  mac: 10:7B:44:7E:E3:EC
+  name: Popeens Server
+  track: false
+
+popeens_tablet:
+  mac: 9C:E0:63:31:0C:D4
+  name: Popeens Tablet
+  track: false
+
+  
+  
+##### VIRTUAL COMPUTERS ##### 
+
+popeens_mediabox:
+  mac: 08:00:27:72:74:86
+  name: Popeens Media Box
+  track: false
+
+  
+
+##### VOICE ASSISTANTS #####
+
+hallway_echo_dot:
+  mac: 00:FC:8B:C1:3C:6A
+  name: Hallway Echo Dot
+  track: false
+
+hallway_google_home_mini:
+  mac: 20:DF:B9:37:C4:B5
+  name: Hallway Google Home Mini
+  track: false
+
+  
+  
+##### MEDIA / CONSOLES #####
+
+livingroom_chromecast:
+  mac: A4:77:33:D3:D5:EA
+  name: Livingroom - Chromecast
+  track: false
+
+popeens_xbox_one:
+  mac: C0:33:5E:5B:58:31
+  name: Popeens Xbox One
+  track: false
+
+
+
+##### MISC DEVICES #####
+
+hp_printer:
+  mac: 18:A9:05:07:E6:8C
+  name: HP Printer
+  track: false
+  
+philips_hue_hub:
+  mac: 00:17:88:76:B0:51
+  name: Philips Hue Hub
+  track: false
+  
+tilgin_router:
+  mac: 00:02:61:C2:75:BC
+  name: Tilgin Router
+  track: false
+ 
+tcl_smart_tv:
+  mac: 20:F5:43:55:BB:8A
+  name: TCL Smart TV
+  track: false
+  
+#TODO, check which multisensor is which
+multisensor:
+  mac: 5C:CF:7F:AA:55:0F
+  name: multisensor
+  track: false
+  
+multisensor2:
+  mac: 60:01:94:52:16:06
+  name: multisensor 2
+  track: false
+  
+  
+  
+##### AUTO DISCOVERED #####
+

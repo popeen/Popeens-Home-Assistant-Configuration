@@ -1,0 +1,74 @@
+- platform: minecraft
+  name: Kakadua Aquatic
+  server: !secret IP_server
+
+- platform: mqtt
+  name: "Popeens OP5 Battery"
+  state_topic: "zanzito/PopeensPhone/battery_level"
+  qos: 0
+  unit_of_measurement: "%"
+
+- platform: yr
+  monitored_conditions:
+    - temperature
+    - symbol
+    - precipitation
+    - windSpeed
+    - fog
+    - cloudiness
+
+- platform: tellstick
+
+- platform: rest
+  resource: https://launchermeta.mojang.com/mc/game/version_manifest.json
+  name: Minecraft Latest Snapshot
+  value_template: '{{ value_json.latest.snapshot }}'
+    
+- platform: rest
+  resource: https://launchermeta.mojang.com/mc/game/version_manifest.json
+  name: Minecraft Latest Release
+  value_template: '{{ value_json.latest.release }}'
+
+- platform: rest
+  resource: http://popeen.com/api/ddtvatt/
+  name: D&D Tvätt - Kåparp
+  value_template: '{{ value_json.2.time }}'  
+  unit_of_measurement: "min"
+
+- platform: rest
+  resource: http://popeen.com/api/ingo/
+  name: Ingo 95 blyfri
+  value_template: '{{ value_json.0.price }}'
+  unit_of_measurement: "kr"
+  
+- platform: mqtt  
+  state_topic: "bruh/bedroom"  
+  name: "Bedroom - Humidity"  
+  unit_of_measurement: "%"  
+  value_template: '{{ value_json.humidity | round(1) }}'
+  
+- platform: mqtt  
+  state_topic: "bruh/bedroom"  
+  name: "Bedroom - Temperature"  
+  unit_of_measurement: "°C"  
+  value_template: '{{ value_json.temperature | round(1) }}' 
+  
+- platform: mqtt  
+  state_topic: "bruh/sensornode1"  
+  name: "Hallway - Humidity"  
+  unit_of_measurement: "%"  
+  value_template: '{{ value_json.humidity | round(1) }}'
+  
+- platform: mqtt  
+  state_topic: "bruh/sensornode1"  
+  name: "Hallway - Temperature"  
+  unit_of_measurement: "°C"  
+  value_template: '{{ value_json.temperature | round(1) }}' 
+  
+- platform: mqtt  
+  state_topic: "bruh/sensornode1"  
+  name: "Hallway - Lightlevel"
+  value_template: '{{ value_json.ldr }}'
+
+- platform: torque
+  email: patrik@ptjwebben.se  

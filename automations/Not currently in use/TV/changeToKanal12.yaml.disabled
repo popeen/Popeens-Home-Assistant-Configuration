@@ -1,0 +1,7 @@
+alias: Change channel to Kanal12
+trigger:
+  platform: state
+  entity_id: input_select.select_channel
+  to: 'Kanal 12'
+action:
+  service: shell_command.channel_kanal12

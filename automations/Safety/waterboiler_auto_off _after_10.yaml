@@ -1,0 +1,10 @@
+alias: Turn off the kettle after 10 minutes
+trigger:
+  platform: state
+  entity_id: switch.kitchen__kettle
+  to: 'on'
+  for:
+    minutes: 10
+action:
+  service: homeassistant.turn_off
+  entity_id: switch.kitchen__kettle

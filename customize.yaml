@@ -1,0 +1,64 @@
+##### WHEATHER #####
+sensor.yr_symbol:
+  friendly_name: Wheater Symbol
+sensor.yr_temperature:
+  friendly_name: Outside - Temperature
+sensor.yr_cloudiness:
+  friendly_name: Clouds
+  icon: mdi:weather-cloudy
+sensor.yr_precipitation:
+  friendly_name: Rain
+  icon: mdi:weather-snowy-rainy
+sensor.yr_wind_speed:
+  friendly_name: Wind
+  icon: mdi:weather-windy
+sensor.yr_fog:
+  friendly_name: Fog
+  icon: mdi:weather-fog
+
+##### LIGHTS #####
+light.br1:
+  friendly_name: Bedroom - Roof
+light.nightlamp:
+  friendly_name: Bedroom - Nightlamp
+light.hw1:
+  friendly_name: Hallway - Roof
+light.k1:
+  friendly_name: Kitchen - Roof
+switch.kitchen__window:
+  friendly_name: Kitchen - Window
+  assumed_state: false
+  icon: mdi:lightbulb
+light.lr1:
+  friendly_name: Livingroom - Roof
+light.storage:
+  friendly_name: Storage - Roof
+  
+##### USERS #####
+device_tracker.popeensphone:
+  friendly_name: Popeen
+sensor.popeens_op5_battery:
+  icon: mdi:battery
+  
+##### COMPUTERS #####
+switch.computer__desktop:
+  friendly_name: Desktop
+switch.computer__laptop:
+  friendly_name: Laptop
+switch.computer__server:
+  friendly_name: Server
+switch.computer__tablet:
+  friendly_name: Tablet
+
+##### LIVINGROOM #####
+switch.xbox:
+  friendly_name: Xbox One
+  icon: mdi:xbox
+  
+##### MISC INFO #####
+sensor.dd_tvatt__kaparp:
+  friendly_name: Queue - Carwash Kåparp
+  icon: mdi:car-wash
+sensor.ingo_95_blyfri:
+  friendly_name: Gas price - Ingo
+  icon: mdi:gas-station

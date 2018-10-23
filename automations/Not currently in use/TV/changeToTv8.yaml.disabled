@@ -1,0 +1,7 @@
+alias: Change channel to TV8
+trigger:
+  platform: state
+  entity_id: input_select.select_channel
+  to: 'TV8'
+action:
+  service: shell_command.channel_tv8

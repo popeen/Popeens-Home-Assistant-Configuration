@@ -1,0 +1,7 @@
+alias: Change channel to Nian
+trigger:
+  platform: state
+  entity_id: input_select.select_channel
+  to: 'Nian'
+action:
+  service: shell_command.channel_nian

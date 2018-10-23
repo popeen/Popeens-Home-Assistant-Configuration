@@ -1,0 +1,38 @@
+- platform: wake_on_lan
+  mac_address: "40-8D-5C-58-D8-6A"
+  host: 192.168.1.216
+  name: Computer - Desktop
+  turn_off:
+
+- platform: wake_on_lan
+  mac_address: "BC-AE-C5-95-16-DE"
+  host: 192.168.1.2
+  name: Computer - Server
+  turn_off:
+  
+- platform: wake_on_lan
+  mac_address: "00-00-00-00-00-00"
+  host: 192.168.1.50
+  name: Computer - Laptop
+  turn_off:
+  
+- platform: wake_on_lan
+  mac_address: "00-00-00-00-00-00"
+  host: 192.168.1.125
+  name: Computer - Tablet
+  turn_off:
+
+- platform: template
+  switches:
+    xbox:
+      value_template: "{% if is_state('media_player.xbox_one', 'on') %}on{% else %}off{% endif %}"
+      turn_on:
+        service: media_player.turn_on
+        data:
+          entity_id: media_player.xbox_one
+      turn_off:
+        service: media_player.turn_off
+        data:
+          entity_id: media_player.xbox_one
+
+- platform: tellstick

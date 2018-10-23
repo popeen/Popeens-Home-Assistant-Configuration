@@ -1,0 +1,11 @@
+alias: Light off
+trigger:
+  platform: state
+  entity_id: sensor.pir_sensor
+  to: 'standby'
+  for:
+    minutes: 30
+    seconds: 0
+action:
+  service: homeassistant.turn_off
+  entity_id: light.kitchen

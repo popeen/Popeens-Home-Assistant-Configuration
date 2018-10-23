@@ -1,0 +1,12 @@
+alias: Turn on main lights before sunset if Popeen is home
+trigger:
+  platform: sun
+  event: sunset
+  offset: "-01:00:00"
+condition:
+  condition: state
+  entity_id: device_tracker.popeensphone
+  state: home
+action:
+  service: homeassistant.turn_on
+  entity_id: group.mainlights

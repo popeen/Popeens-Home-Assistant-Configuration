@@ -1,0 +1,10 @@
+alias: Send notification when homeserver shuts down
+trigger:
+  platform: state
+  entity_id: switch.popeens_server
+  from: 'on'
+  to: 'off'
+action:
+  service: notify.email_popeen
+  data_template:
+    message: Servern stängdes av.

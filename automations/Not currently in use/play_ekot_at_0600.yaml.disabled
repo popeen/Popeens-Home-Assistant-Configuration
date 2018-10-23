@@ -1,0 +1,14 @@
+alias: Ekot klockan 06:00
+trigger:
+  platform: time
+  at: '06:00:00'
+condition:
+  condition: state
+  entity_id: device_tracker.popeensphone
+  state: home
+action:
+  service: media_player.play_media
+  data:
+    entity_id: media_player.sovrum__kodibox
+    media_content_id: http://popeen.com/api/senasteEkot/
+    media_content_type: audio/mp3

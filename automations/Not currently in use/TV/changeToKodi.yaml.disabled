@@ -1,0 +1,7 @@
+alias: Change channel to Kodi
+trigger:
+  platform: state
+  entity_id: input_select.select_channel
+  to: 'Kodi'
+action:
+  service: shell_command.channel_kodi

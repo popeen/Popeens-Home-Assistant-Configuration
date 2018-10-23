@@ -1,0 +1,7 @@
+alias: Turn on Bedroom lights at 06:00
+trigger:
+  platform: time
+  at: '06:00:00'
+action:
+  service: homeassistant.turn_on
+  entity_id: light.bedroom

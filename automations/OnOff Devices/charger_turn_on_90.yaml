@@ -1,0 +1,13 @@
+alias: Starta laddare vid 90
+trigger:
+  platform: state
+  entity_id: sensor.popeens_op5_battery
+  from: '91'
+  to: '90'
+condition:
+  condition: state
+  entity_id: device_tracker.popeensphone
+  state: home
+action:
+  service: homeassistant.turn_on
+  entity_id: switch.bedroom__phone_charger

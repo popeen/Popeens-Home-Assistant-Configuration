@@ -1,0 +1,7 @@
+alias: Change channel to TLC
+trigger:
+  platform: state
+  entity_id: input_select.select_channel
+  to: 'TLC'
+action:
+  service: shell_command.channel_tlc

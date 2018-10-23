@@ -1,0 +1,13 @@
+alias: Stang av laddare vid 100
+trigger:
+  platform: state
+  entity_id: sensor.popeens_op5_battery
+  from: '99'
+  to: '100'
+condition:
+  condition: state
+  entity_id: device_tracker.popeensphone
+  state: home
+action:
+  service: homeassistant.turn_off
+  entity_id: switch.bedroom__phone_charger

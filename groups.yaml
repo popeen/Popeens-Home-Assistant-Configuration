@@ -1,0 +1,150 @@
+
+##### VIEWS START #####
+
+default_view:
+  view: yes
+  name: Home
+  icon: mdi:home
+  entities:
+    - group.games
+    - group.environment
+    - group.hallway
+    - group.bedroom
+    - group.lights
+    - group.popeen
+    - group.devices
+    - group.computers
+    - group.misc
+
+auto_view:
+  view: yes
+  icon: mdi:auto-fix
+  name: Automatisations
+  entities:
+    - group.auto_lamps
+    - group.auto_notifications
+    - group.auto_safety
+    - group.auto_misc
+
+##### VIEWS STOP #####
+
+
+
+##### DISPLAY GROUPS START #####
+
+#### AUTO ####
+auto_lamps:
+  name: Lamps
+  entities:
+    - automation.turn_off_all_lights_at_0100
+    - automation.turn_off_all_lights_at_0900
+    - automation.turn_on_bedroom_lights_at_0600
+    - automation.turn_on_main_lights_before_sunset_if_popeen_is_home
+    - automation.turn_on_main_lights_when_popeen_gets_home
+    
+auto_safety:
+  name: Safety
+  entities:
+    - automation.turn_off_the_kettle_after_10_minutes
+    
+auto_misc:
+  name: Misc
+  entities:
+    
+auto_notifications:
+  name: Notifications
+  entities:
+    - automation.send_notification_when_homeserver_shuts_down
+
+#### MAIN ####
+environment:
+  name: Environment
+  entities:
+    - sun.sun
+    - sensor.yr_symbol
+    - sensor.yr_temperature
+    - sensor.hallway__temperature
+    - sensor.bedroom__temperature
+    - sensor.yr_cloudiness
+    - sensor.yr_precipitation
+    - sensor.yr_wind_speed
+    - sensor.yr_fog
+    
+lights:
+    name: Lights
+    entities:
+        - light.hw1
+        - light.lr1
+        - light.k1
+        - switch.kitchen__window
+        - light.br1
+        - light.nightlamp
+        - light.storage
+
+popeen:
+  name: Popeen
+  entities:
+    - device_tracker.popeensphone
+    - sensor.popeens_op5_battery
+
+devices:
+  name: Misc Devices
+  control: hidden
+  entities:
+    - switch.kitchen__kettle
+    - switch.livingroom__fan
+    - switch.livingroom__tv
+    - switch.xbox
+    - switch.balcony__outlet
+
+computers:
+  name: Computers
+  control: hidden
+  entities:
+    - switch.computer__desktop
+    - switch.computer__laptop
+    - switch.computer__tablet
+    - switch.computer__server
+
+games:
+  name: Games
+  entities:
+    - sensor.kakadua_aquatic
+
+misc:
+  name: Misc Info
+  entities:
+    - sensor.dd_tvatt__kaparp
+    - sensor.traveltime__work
+    - sensor.ingo_95_blyfri
+
+hallway:
+  name: Hallway
+  entities:
+    - light.hw1
+    - sensor.hallway__temperature
+    - sensor.hallway__humidity
+    - sensor.hallway__lightlevel
+    
+bedroom:
+  name: Bedroom
+  entities:
+    - light.br1
+    - sensor.bedroom__temperature
+    - sensor.bedroom__humidity
+    - switch.bedroom__fan
+    - switch.bedroom__phone_charger
+    
+##### DISPLAY GROUPS STOP #####
+
+
+##### HIDDEN GROUPS START #####
+
+mainlights:
+    name: Main Lights
+    entities:
+        - light.hw1
+        - light.lr1
+        - light.k1
+
+##### HIDDEN GROUPS STOP #####

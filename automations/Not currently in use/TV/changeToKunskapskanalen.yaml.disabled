@@ -1,0 +1,7 @@
+alias: Change channel to Kunskapskanalen
+trigger:
+  platform: state
+  entity_id: input_select.select_channel
+  to: 'Kunskapskanalen'
+action:
+  service: shell_command.channel_kunskapskanalen
