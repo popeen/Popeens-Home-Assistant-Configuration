@@ -8,12 +8,12 @@ popeensphone:
 martins_phone:
   mac: 2C:0E:3D:4F:63:A3
   name: Martin
-  track: true
+  track: false
 
 nimas_phone:
   mac: 94:65:2D:A4:95:A3
   name: Nima
-  track: true
+  track: false
 
 
 
