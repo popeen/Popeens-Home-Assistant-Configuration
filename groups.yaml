@@ -45,7 +45,7 @@ auto_lamps:
 auto_safety:
   name: Safety
   entities:
-    - automation.turn_off_the_kettle_after_10_minutes
+    - automation.turn_off_the_kettle_after_7_minutes
     
 auto_misc:
   name: Misc
